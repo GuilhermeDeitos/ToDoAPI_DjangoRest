@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 import todo_api.urls as todo_urls
+import movies_api.urls as movies_urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('todos/', include(todo_urls)),
+    path('movies/', include(movies_urls))
 ]
